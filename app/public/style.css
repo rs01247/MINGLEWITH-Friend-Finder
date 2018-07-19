@@ -1,0 +1,19 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-div {
+    margin-top: 25vh;
+}
+
+#logo {
+    font-family: 'Work Sans', sans-serif;
+}   
+
+#user-name, #photo-file {
+    width: 50%;
+}
+
+#number-question {
+    font-weight: bold;
+}
