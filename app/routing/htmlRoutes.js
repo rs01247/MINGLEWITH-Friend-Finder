@@ -2,8 +2,8 @@
 
 const path = require('path');
 const express = require('express');
-// const app = express();
 
+//ROUTER TO PASS THIS CONNECTION ON TO SERVER AND APIROUTES
 const router = express.Router();
 
 //ROUTE FOR HOME PAGE

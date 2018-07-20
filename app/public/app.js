@@ -38,16 +38,50 @@ const surveyQuestions = [
     q10 = {
         num: 'Question 10',
         quest: 'I love to watch cartoons',
-    },   
-]
+    },
+];
 
-$('#survey-box').hide();
+// function init() {
+//     $('#survey-box').hide();
+//     $('#info-sub').on('click', function (event) {
+//         // event.preventDefault();
+//         userName = $('#user-name').val().trim();
+//         userPhoto = $('#photo-file').val().trim();
 
-$('#info-sub').on('click', function(){
-    const userName = $('#user-name').val().trim();
-    const userPhoto = $('#photo-file').val().trim();
+//         $('#user-info').hide();
+//         $('#survey-box').show();
+//         surveyPlay(userName, userPhoto);
+//     });
+// }
 
-    $('#user-info').hide();
-    $('#survey-box').show();
-}) 
+function surveyPlay() {
+    $('#send-survey').on('click', function (event) {
+        event.preventDefault();
+        const userName = $('#user-name').val().trim();
+        const userPhoto = $('#photo-file').val().trim();
+        const newFriend = {
+            name: userName,
+            photo: userPhoto,
+            scores: [   
+                $('#q1').val(),
+                $('#q2').val(),
+                $('#q3').val(),
+                $('#q4').val(),
+                $('#q5').val(),
+                $('#q6').val(),
+                $('#q7').val(),
+                $('#q8').val(),
+                $('#q9').val(),
+                $('#q10').val()
+            ]
+        }
+        console.log(newFriend);
 
+        $.post("/api/friends", newFriend)
+            .then(function (data) {
+                console.log(data);
+            }); 
+    })
+}
+
+surveyPlay();

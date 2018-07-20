@@ -2,31 +2,36 @@
 
 const express = require("express");
 const parser = require("body-parser");
-const app = express();
+const router = express.Router();
+
+router.use(require('./htmlRoutes'));
+router.use(require('../../server'));
 
 //BODY PARSING FOR EXPRESS APP
-app.use(parser.urlencoded({ extended: true }));
-app.use(parser.json());
+router.use(parser.urlencoded({ extended: true }));
+router.use(parser.json());
 
 const friends = require('../data/friends');
 
-app.get("/api/friends", function (req, res) {
+router.get("/api/friends", function (req, res) {
     const chosen = req.params.friends;
     if (chosen) {
         console.log(chosen);
-        friends.forEach(function (element) {
+        friends.forEach(function () {
             if (chosen === friends[i].name) {
                 return res.json(friends[i]);
             }
         });
         return res.json(false);
     }
-    return res.json(reservations);
+    return res.json(friends);
 });
 
-app.post("/api/new", function (req, res) {
+router.post("/api/friends", function (req, res) {
     const newFriend = req.body;
     console.log(newFriend);
     friends.push(newFriend);
     res.json(newFriend);
 });
+
+module.exports = router;

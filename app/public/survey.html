@@ -13,11 +13,10 @@
 
 <body>
 
-    <div class="main-div container">
+    <div class="main-div container mb-5">
 
-        <div id="user-info">
-            <h2>Who are you?</h2>
-
+        <!-- <div id="user-info">
+            <h2>Who are you?</h2>   
             <form>
                 <div class="form-group">
                     <label for="user-name">Your Name</label>
@@ -27,147 +26,160 @@
                     <label for="user-name">Link an Image of Yourself</label>
                     <input type="text" class="form-control" id="photo-file" required>
                 </div>
-                <!-- <div class="form-group">
+                <div class="form-group">
                     <label for="photo-file">Upload a photo of yourself!</label>
                     <input type="file" class="form-control-file" id="photo-file" required>
-                </div> -->
+                </div>
                 <button type="button" class="btn btn-secondary btn-sm" id='info-sub'>Submit</button>
             </form>
+        </div> -->
+
+        <div id='survey-box'>
+            <h2 id='who-you'>Who are you?</h2>
+            <form>
+                <div class="form-group">
+                    <label for="user-name">Your Name</label>
+                    <input type="text" class="form-control" id="user-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="user-name">Link an Image of Yourself</label>
+                    <input type="text" class="form-control" id="photo-file" required>
+                </div>
+            </form>
+        </div>
+        <div class='mb-4'>
+            <h2 id='number-question'>Question 1</h2>
+            <h5 class='mt-2' id='what-question'>"I am a home-body. Staying in and relaxing on a couch is my ideal Friday night"</h5>
+            <select class='select-quest' id="q1">
+                <option value></option>
+                <option value="1">1 (Strongly Agree)</option>
+                <option value="2">2</option>
+                <option value="3">3 (Indifferent)</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Disagree)</option>
+            </select>
         </div>
 
-        <div id="survey-box" class='mb-5'>
-            <div class='mb-5'>
-                <h2 id='number-question'>Question 1</h2>
-                <h5 class='mt-2' id='what-question'>"I am a home-body. Staying in and relaxing on a couch is my ideal Friday night"</h5>
-                <select id="">
-                    <option value></option>
-                    <option value="1">1 (Strongly Agree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3 (Indifferent)yy</option>
-                    <option value="4">4</option>
-                    <option value="4">4 (Strongly Disagree)</option>
-                </select>
-            </div>
-
-            <div class='mb-5'>
-                <h2 id='number-question'>Question 2</h2>
-                <h5 class='mt-2' id='what-question'>"I love working out. Keeping my body fit is a huge priority for me"</h5>
-                <select id="">
-                    <option value></option>
-                    <option value="1">1 (Strongly Agree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3 (Indifferent)yy</option>
-                    <option value="4">4</option>
-                    <option value="4">4 (Strongly Disagree)</option>
-                </select>
-            </div>
-
-            <div class='mb-5'>
-                <h2 id='number-question'>Question 3</h2>
-                <h5 class='mt-2' id='what-question'>"My home/desk is usually very neat and organized"</h5>
-                <select id="">
-                    <option value></option>
-                    <option value="1">1 (Strongly Agree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3 (Indifferent)yy</option>
-                    <option value="4">4</option>
-                    <option value="4">4 (Strongly Disagree)</option>
-                </select>
-            </div>
-
-            <div class='mb-5'>
-                <h2 id='number-question'>Question 4</h2>
-                <h5 class='mt-2' id='what-question'>"Plans are usually very spontaneous for me, I like to go with the flow"</h5>
-                <select id="">
-                    <option value></option>
-                    <option value="1">1 (Strongly Agree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3 (Indifferent)yy</option>
-                    <option value="4">4</option>
-                    <option value="4">4 (Strongly Disagree)</option>
-                </select>
-            </div>
-
-            <div class='mb-5'>
-                <h2 id='number-question'>Question 5</h2>
-                <h5 class='mt-2' id='what-question'>"I am obsessed with watching/playing sports. It is almost a religion"</h5>
-                <select id="">
-                    <option value></option>
-                    <option value="1">1 (Strongly Agree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3 (Indifferent)yy</option>
-                    <option value="4">4</option>
-                    <option value="4">4 (Strongly Disagree)</option>
-                </select>
-            </div>
-
-            <div class='mb-5'>
-                <h2 id='number-question'>Question 6</h2>
-                <h5 class='mt-2' id='what-question'>"I am a very religious person"</h5>
-                <select id="">
-                    <option value></option>
-                    <option value="1">1 (Strongly Agree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3 (Indifferent)yy</option>
-                    <option value="4">4</option>
-                    <option value="4">4 (Strongly Disagree)</option>
-                </select>
-            </div>
-
-            <div class='mb-5'>
-                <h2 id='number-question'>Question 7</h2>
-                <h5 class='mt-2' id='what-question'>"Family is everything to me"</h5>
-                <select id="">
-                    <option value></option>
-                    <option value="1">1 (Strongly Agree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3 (Indifferent)yy</option>
-                    <option value="4">4</option>
-                    <option value="4">4 (Strongly Disagree)</option>
-                </select>
-            </div>
-
-            <div class='mb-5'>
-                <h2 id='number-question'>Question 8</h2>
-                <h5 class='mt-2' id='what-question'>"I don't really care what people think of me"</h5>
-                <select id="">
-                    <option value></option>
-                    <option value="1">1 (Strongly Agree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3 (Indifferent)yy</option>
-                    <option value="4">4</option>
-                    <option value="4">4 (Strongly Disagree)</option>
-                </select>
-            </div>
-
-            <div class='mb-5'>
-                <h2 id='number-question'>Question 9</h2>
-                <h5 class='mt-2' id='what-question'>"Having a nice car and a nice house is important to me"</h5>
-                <select id="">
-                    <option value></option>
-                    <option value="1">1 (Strongly Agree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3 (Indifferent)yy</option>
-                    <option value="4">4</option>
-                    <option value="4">4 (Strongly Disagree)</option>
-                </select>
-            </div>
-
-            <div class='mb-5'>
-                <h2 id='number-question'>Question 10</h2>
-                <h5 class='mt-2' id='what-question'>"I love to watch cartoons"</h5>
-                <select id="">
-                    <option value></option>
-                    <option value="1">1 (Strongly Agree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3 (Indifferent)yy</option>
-                    <option value="4">4</option>
-                    <option value="4">4 (Strongly Disagree)</option>
-                </select>
-            </div>
-
-            <button type="button" class="btn btn-secondary btn-md" id='info-sub'>Submit</button>
+        <div class='mb-4'>
+            <h2 id='number-question'>Question 2</h2>
+            <h5 class='mt-2' id='what-question'>"I love working out. Keeping my body fit is a huge priority for me"</h5>
+            <select class='select-quest' id="q2">
+                <option value></option>
+                <option value="1">1 (Strongly Agree)</option>
+                <option value="2">2</option>
+                <option value="3">3 (Indifferent)</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Disagree)</option>
+            </select>
         </div>
+
+        <div class='mb-4'>
+            <h2 id='number-question'>Question 3</h2>
+            <h5 class='mt-2' id='what-question'>"My home/desk is usually very neat and organized"</h5>
+            <select class='select-quest' id="q3">
+                <option value></option>
+                <option value="1">1 (Strongly Agree)</option>
+                <option value="2">2</option>
+                <option value="3">3 (Indifferent)</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Disagree)</option>
+            </select>
+        </div>
+
+        <div class='mb-4'>
+            <h2 id='number-question'>Question 4</h2>
+            <h5 class='mt-2' id='what-question'>"Plans are usually very spontaneous for me, I like to go with the flow"</h5>
+            <select class='select-quest' id="q4">
+                <option value></option>
+                <option value="1">1 (Strongly Agree)</option>
+                <option value="2">2</option>
+                <option value="3">3 (Indifferent)</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Disagree)</option>
+            </select>
+        </div>
+
+        <div class='mb-4'>
+            <h2 id='number-question'>Question 5</h2>
+            <h5 class='mt-2' id='what-question'>"I am obsessed with watching/playing sports. It is almost a religion"</h5>
+            <select class='select-quest' id="q5">
+                <option value></option>
+                <option value="1">1 (Strongly Agree)</option>
+                <option value="2">2</option>
+                <option value="3">3 (Indifferent)</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Disagree)</option>
+            </select>
+        </div>
+
+        <div class='mb-4'>
+            <h2 id='number-question'>Question 6</h2>
+            <h5 class='mt-2' id='what-question'>"I am a very religious person"</h5>
+            <select class='select-quest' id="q6">
+                <option value></option>
+                <option value="1">1 (Strongly Agree)</option>
+                <option value="2">2</option>
+                <option value="3">3 (Indifferent)</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Disagree)</option>
+            </select>
+        </div>
+
+        <div class='mb-4'>
+            <h2 id='number-question'>Question 7</h2>
+            <h5 class='mt-2' id='what-question'>"Family is everything to me"</h5>
+            <select class='select-quest' id="q7">
+                <option value></option>
+                <option value="1">1 (Strongly Agree)</option>
+                <option value="2">2</option>
+                <option value="3">3 (Indifferent)</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Disagree)</option>
+            </select>
+        </div>
+
+        <div class='mb-4'>
+            <h2 id='number-question'>Question 8</h2>
+            <h5 class='mt-2' id='what-question'>"I don't really care what people think of me"</h5>
+            <select class='select-quest' id="q8">
+                <option value></option>
+                <option value="1">1 (Strongly Agree)</option>
+                <option value="2">2</option>
+                <option value="3">3 (Indifferent)</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Disagree)</option>
+            </select>
+        </div>
+
+        <div class='mb-4'>
+            <h2 id='number-question'>Question 9</h2>
+            <h5 class='mt-2' id='what-question'>"Having a nice car and a nice house is important to me"</h5>
+            <select class='select-quest' id="q9">
+                <option value></option>
+                <option value="1">1 (Strongly Agree)</option>
+                <option value="2">2</option>
+                <option value="3">3 (Indifferent)</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Disagree)</option>
+            </select>
+        </div>
+
+        <div class='mb-4'>
+            <h2 id='number-question'>Question 10</h2>
+            <h5 class='mt-2' id='what-question'>"I love to watch cartoons"</h5>
+            <select class='select-quest' id="q10">
+                <option value></option>
+                <option value="1">1 (Strongly Agree)</option>
+                <option value="2">2</option>
+                <option value="3">3 (Indifferent)</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Disagree)</option>
+            </select>
+        </div>
+
+        <button type="button" class="btn btn-secondary btn-md" id='send-survey'>Submit</button>
+
+    </div>
 
     </div>
 

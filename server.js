@@ -3,7 +3,7 @@ const express = require('express');
 const parser = require('body-parser');
 const routes = require('./app/routing/htmlRoutes');
 const path = require('path');
-
+const router = express.Router();
 const app = express();
 const PORT = process.env.PORT || 8080;
 
@@ -19,3 +19,4 @@ app.use('/', routes);
 app.listen(PORT, function (){
     console.log(`Listening on ${PORT}`);
 });
+module.exports = router

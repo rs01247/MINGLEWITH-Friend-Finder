@@ -2,9 +2,9 @@
 
 const friendList = [
     {
-        name: '',
-        photo: '',
-        scores: []
+        name: 'Bob',
+        photo: 'http',
+        scores: ['3','5','6','7','8','3','2','5','7','2']
     }
 ];
 
