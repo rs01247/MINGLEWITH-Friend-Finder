@@ -1,3 +1,18 @@
+// LEAVING THIS IN HERE AS INITIAL FLOW OF SURVEY WAS TO HIDE AND SHOW DIVS FOR EACH QUESTION
+
+// function init() {
+//     $('#survey-box').hide();
+//     $('#info-sub').on('click', function (event) {
+//         // event.preventDefault();
+//         userName = $('#user-name').val().trim();
+//         userPhoto = $('#photo-file').val().trim();
+
+//         $('#user-info').hide();
+//         $('#survey-box').show();
+//         surveyPlay(userName, userPhoto);
+//     });
+// }
+
 const surveyQuestions = [
     q1 = {
         num: 'Question 1',
@@ -41,47 +56,63 @@ const surveyQuestions = [
     },
 ];
 
-// function init() {
-//     $('#survey-box').hide();
-//     $('#info-sub').on('click', function (event) {
-//         // event.preventDefault();
-//         userName = $('#user-name').val().trim();
-//         userPhoto = $('#photo-file').val().trim();
-
-//         $('#user-info').hide();
-//         $('#survey-box').show();
-//         surveyPlay(userName, userPhoto);
-//     });
-// }
-
 function surveyPlay() {
     $('#send-survey').on('click', function (event) {
         event.preventDefault();
-        const userName = $('#user-name').val().trim();
-        const userPhoto = $('#photo-file').val().trim();
-        const newFriend = {
-            name: userName,
-            photo: userPhoto,
-            scores: [   
-                $('#q1').val(),
-                $('#q2').val(),
-                $('#q3').val(),
-                $('#q4').val(),
-                $('#q5').val(),
-                $('#q6').val(),
-                $('#q7').val(),
-                $('#q8').val(),
-                $('#q9').val(),
-                $('#q10').val()
-            ]
-        }
-        console.log(newFriend);
 
-        $.post("/api/friends", newFriend)
-            .then(function (data) {
-                console.log(data);
-            }); 
+        function validation() {
+            let formValid = true;
+            $('.form-control').each(function () {
+                if ($(this).val() === '') {
+                    formValid = false;
+                }
+            });
+
+            $('.select-quest').each(function () {
+                if ($(this).val() === '') {
+                    formValid = false;
+                }
+            });
+
+            return formValid;
+        }
+
+        if (validation()) {
+            const userName = $('#user-name').val().trim();
+            const userPhoto = $('#photo-file').val().trim();
+            const newFriend = {
+                name: userName,
+                photo: userPhoto,
+                scores: [
+                    $('#q1').val(),
+                    $('#q2').val(),
+                    $('#q3').val(),
+                    $('#q4').val(),
+                    $('#q5').val(),
+                    $('#q6').val(),
+                    $('#q7').val(),
+                    $('#q8').val(),
+                    $('#q9').val(),
+                    $('#q10').val()
+                ]
+            }
+
+            $.post("/api/friends", newFriend)
+                .then(function (data) {
+                    console.log(data);
+                    $("#your-friend").text(data.name);
+                    $("#friend-photo").attr("src", data.photo);
+                    $("#friend-modal").modal("toggle");
+                });
+        }
+        else {
+            alert('You have not completed the entire survey!');
+        }
     })
+
+    $('#friend-modal').on('hidden.bs.modal', function () {
+        location.href = '/';
+       })
 }
 
 surveyPlay();

@@ -10,7 +10,7 @@ const router = express.Router();
 router.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, '../public/home.html'));
 })
-
+    
 //ROUTE TO TAKE USER TO SURVEY
 router.get('/survey', function (req, res) {
     res.sendFile(path.join(__dirname, '../public/survey.html'));

@@ -15,6 +15,9 @@
 
     <div class="main-div container mb-5">
 
+        <!--THIS WOULD'VE SET UP THE APP SO THAT USER NAME AND PHOTO WAS ON ITS OWN PAGE. 
+            ALSO EACH QUESTION WAS INTENDED TO SHOW UP INDIVIDUALLY -->
+
         <!-- <div id="user-info">
             <h2>Who are you?</h2>   
             <form>
@@ -49,7 +52,7 @@
         </div>
         <div class='mb-4'>
             <h2 id='number-question'>Question 1</h2>
-            <h5 class='mt-2' id='what-question'>"I am a home-body. Staying in and relaxing on a couch is my ideal Friday night"</h5>
+            <h5 class='mt-2' id='what-question'>I am a home-body. Staying in and relaxing on a couch is my ideal Friday night</h5>
             <select class='select-quest' id="q1">
                 <option value></option>
                 <option value="1">1 (Strongly Agree)</option>
@@ -62,7 +65,7 @@
 
         <div class='mb-4'>
             <h2 id='number-question'>Question 2</h2>
-            <h5 class='mt-2' id='what-question'>"I love working out. Keeping my body fit is a huge priority for me"</h5>
+            <h5 class='mt-2' id='what-question'>I love working out. Keeping my body fit is a huge priority for me</h5>
             <select class='select-quest' id="q2">
                 <option value></option>
                 <option value="1">1 (Strongly Agree)</option>
@@ -75,7 +78,7 @@
 
         <div class='mb-4'>
             <h2 id='number-question'>Question 3</h2>
-            <h5 class='mt-2' id='what-question'>"My home/desk is usually very neat and organized"</h5>
+            <h5 class='mt-2' id='what-question'>My home/desk is usually very neat and organized</h5>
             <select class='select-quest' id="q3">
                 <option value></option>
                 <option value="1">1 (Strongly Agree)</option>
@@ -88,7 +91,7 @@
 
         <div class='mb-4'>
             <h2 id='number-question'>Question 4</h2>
-            <h5 class='mt-2' id='what-question'>"Plans are usually very spontaneous for me, I like to go with the flow"</h5>
+            <h5 class='mt-2' id='what-question'>Plans are usually very spontaneous for me, I like to go with the flow</h5>
             <select class='select-quest' id="q4">
                 <option value></option>
                 <option value="1">1 (Strongly Agree)</option>
@@ -101,7 +104,7 @@
 
         <div class='mb-4'>
             <h2 id='number-question'>Question 5</h2>
-            <h5 class='mt-2' id='what-question'>"I am obsessed with watching/playing sports. It is almost a religion"</h5>
+            <h5 class='mt-2' id='what-question'>I am obsessed with watching/playing sports. It is almost a religion</h5>
             <select class='select-quest' id="q5">
                 <option value></option>
                 <option value="1">1 (Strongly Agree)</option>
@@ -114,7 +117,7 @@
 
         <div class='mb-4'>
             <h2 id='number-question'>Question 6</h2>
-            <h5 class='mt-2' id='what-question'>"I am a very religious person"</h5>
+            <h5 class='mt-2' id='what-question'>I am a very religious person</h5>
             <select class='select-quest' id="q6">
                 <option value></option>
                 <option value="1">1 (Strongly Agree)</option>
@@ -127,7 +130,7 @@
 
         <div class='mb-4'>
             <h2 id='number-question'>Question 7</h2>
-            <h5 class='mt-2' id='what-question'>"Family is everything to me"</h5>
+            <h5 class='mt-2' id='what-question'>Family is everything to me</h5>
             <select class='select-quest' id="q7">
                 <option value></option>
                 <option value="1">1 (Strongly Agree)</option>
@@ -140,7 +143,7 @@
 
         <div class='mb-4'>
             <h2 id='number-question'>Question 8</h2>
-            <h5 class='mt-2' id='what-question'>"I don't really care what people think of me"</h5>
+            <h5 class='mt-2' id='what-question'>I don't really care what people think of me</h5>
             <select class='select-quest' id="q8">
                 <option value></option>
                 <option value="1">1 (Strongly Agree)</option>
@@ -153,7 +156,7 @@
 
         <div class='mb-4'>
             <h2 id='number-question'>Question 9</h2>
-            <h5 class='mt-2' id='what-question'>"Having a nice car and a nice house is important to me"</h5>
+            <h5 class='mt-2' id='what-question'>Having a nice car and a nice house is important to me</h5>
             <select class='select-quest' id="q9">
                 <option value></option>
                 <option value="1">1 (Strongly Agree)</option>
@@ -166,7 +169,7 @@
 
         <div class='mb-4'>
             <h2 id='number-question'>Question 10</h2>
-            <h5 class='mt-2' id='what-question'>"I love to watch cartoons"</h5>
+            <h5 class='mt-2' id='what-question'>I love to watch cartoons</h5>
             <select class='select-quest' id="q10">
                 <option value></option>
                 <option value="1">1 (Strongly Agree)</option>
@@ -179,7 +182,23 @@
 
         <button type="button" class="btn btn-secondary btn-md" id='send-survey'>Submit</button>
 
-    </div>
+        <!-- MODAL THAT WILL DISPLAY WHEN SURVEY IS SUBMITTED -->
+        <div id="friend-modal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Your New Match!</h1>
+                    </div>
+                    <div class="modal-body">
+                        <h2 id="your-friend"></h2>
+                        <img id="friend-photo" src="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 
@@ -197,6 +216,10 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
     <script type="text/javascript" src="./app.js"></script>
 </body>
 
