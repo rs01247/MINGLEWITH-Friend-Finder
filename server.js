@@ -14,7 +14,7 @@ app.use(parser.json());
 // USING CSS AND APP.JS FILES
 app.use(express.static(path.join(__dirname, 'app/public')));
 
-// ROUTING TO HTMLROUTES.JS
+// USING HTMLROUTES.JS
 app.use('/', routes);
 
 // ACCESSING APIROUTES.JS

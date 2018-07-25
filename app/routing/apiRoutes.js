@@ -1,7 +1,7 @@
 // THIS WILL ROUTE TO FRIENDS.JS
 
-const express = require("express");
-const parser = require("body-parser");
+const express = require('express');
+const parser = require('body-parser');
 const router = express.Router();
 
 // BODY PARSING FOR EXPRESS APP
@@ -11,12 +11,12 @@ router.use(parser.json());
 const friends = require('../data/friends');
 
 // GET ROUTE FOR DISPLAYING FRIENDLIST ARRAY
-router.get("/api/friends", function (req, res) {
+router.get('/api/friends', function (req, res) {
     res.json(friends);
 });
 
 // POST ROUTE TO SEND SURVEY RESULTS TO FRIENDLIST
-router.post("/api/friends", function (req, res) {
+router.post('/api/friends', function (req, res) {
     console.log(req.body.scores);
     var newFriend = req.body;
     for (var i = 0; i < newFriend.scores.length; i++) {
